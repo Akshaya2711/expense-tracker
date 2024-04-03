@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="add-expense">
+            <input type="text" id="description" placeholder="Enter expense description">
+            <input type="number" id="amount" placeholder="Enter amount">
+ <select id="category" placeholder="Select the type of expense">
+    <option value="">Select category</option>
+    <option value="Food">Food</option>
+    <option value="Transport">Transport</option>
+    <option value="Utilities">Utilities</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Entertainment">Entertainment</option>
+    <!-- Add more options as needed -->
+</select>
+
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="calculate-options">
+            <input type="checkbox" id="show-category-sum" onchange="displayExpenses()">
+            <label for="show-category-sum">Show Category Sum</label>
+        </div>
+        <div id="expense-list">
+            <!-- Expense items will be displayed here -->
+        </div>
+        <div id="total-expense">
+            Total Expense: ₹<span id="total">0</span>
+        </div>
+        <div id="category-sum-list">
+            <!-- Category-wise expense totals will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
